@@ -1,10 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
 </head>
 <body>
+<a href="/about"></a>
 
+<h2>Responsive "Meet The Team" Section</h2>
+<p>Resize the browser window to see the effect.</p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://gm1.ggpht.com/m1ANTXZ6NgCJybC9xSK5xpZ1GbuGaKDbDp0Rboa4btbua892chmRqZDxl32oGa53ON0cc2TbSFs2MTZMuJeu905vb5jhClIrCtvLoFt2wcGLqscI-SQjjn411lkQcLqZmfS_ZeSv0JRp3x_e3590mi5-vgqqgSBs_TqZEJ_1vsVAAc6ILpSziORpkIhgc7eN--gj_qb4R-1_UQr7ExkzuSQKRiyZNDvlDWN6EgtM_9q4yOudGOZqEay3yZYef2FNjpL_Zcn4-uVUSyxRhAq3KRQT8PFntJProYw3oZI-ymXib_OyzPI2pqNU5lonmh7CZtl9Ro2T-KNeL47klJ2MsewL6fgcpkXWxFjF0-WCbp8376-9w8ohBZL31Qvzjg04h7eFKhc4jyeChe-LkfVaRgVR0dwKRREKIQXa_wiqu3EyLC0TsM1xbAnrTEa5RAV_Tdh5HmF8Zkt7c9d7-GJGnWisjqwIPoGkoq2bZ_Yde5IZBn8skBo6B5aRuevguRIGXPesWroduguF4P-gTxk5xxTKO3sBK2Puhc-wMI4GKdL9MKzjSS3qLhjFRAKeEVDlKUpbVtEqqrLvrZzj8mUQpmlup4tcHRiNYp3pe9_WS1Z1L1DIT3FGZlC0Zhuzi3ihACRCWNZgOSDP6KpC3IT_tsQ0h3z19z_qWFUBc0hmjuGij_uP_l_wgSvHY7WV_OKLZHdR4oviQZRkiTAEF5MxgzH7DdihxxtmLGmsoTiP5sCv2D1WRKoWcngi8ziUY8kY=s0-l75-ft-l75-ft" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="https://gm1.ggpht.com/1DnRMjqfDBli-wZhBCQIaT4r6w8lXcKgAzbJCcejZP4LZPtihq4ySkjv0xFFSxCh17qjxKGt-5KdJIUcQ5ArGu6QDF9xgDIUt20INejBpVElerTKlzGIR9MBmrnCsnoQeAeJcOM-VwnD3KNdqRF3MQUGDWNfrNXDFqrYr-HPOq5fy4krfJAYZ6-Yv_tXop9gHXveBdIZLAlk5H6pOPkyZxFS3tRhmHSWBcy2bmoIsi3HuDYX8DjLIp-wxoXxIzAfkJ8gZmMh3yxWLluPEgZP34sUfoHWor2aCihMzD0d8PPIhofsd8xTP0vIacyo5m5VAceL7VBogeROZX-dqMd67pHfkBIcK1A_TxQtAMI3H-pOtLZLm46ilPpTcjqhkwctErhT9V1dJw96_AJCoc504tkhA6xvrvyzvAXw5LXN0ETF3Oxo1JGbkQxo6d2fvUF3ZspI_ReiPvVJwwpIEaQ_FqoypPau_oxoIXgwO4egUnjwmlCfM4K6uCIFuDG4WPaXXd4sPQo7zc2-VZJ91X8w9gNmB-GJnDJJ0tfoegsmsjoC00Nf7jGYIwWHUBM6PQTSpbPDjvGopD4vYGihz4nfq3daKXtI4iET49QoR4stky8MTLrvIzKw0V0md24m2vafi_undvILnfzUcw_IR0hlhCSR1mUfUs3DqjSTtFORPo9c5SHQdXYdpBy_1teUJvcPydn4_q26FSSOWiNTDLDnjWe2NeWM7A-Vmc04hav5Us2-yV-91JqhOvzmaJtL=s0-l75-ft-l75-ft" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
